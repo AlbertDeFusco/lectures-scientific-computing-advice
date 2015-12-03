@@ -7,7 +7,6 @@ There are a plethora of best practices available to help you scientifically comp
 It is likely that you will only be able to afford a limited amount of time learning a subset of them.
 The purpose of this lecture is to help orient you on the path to writing software as part of your research by:
 
->
 * introducing the most important practices of software construction
     + and relating them to your role as a `data scientist`
 * making specific recommendations for
@@ -18,7 +17,6 @@ The purpose of this lecture is to help orient you on the path to writing softwar
 
 [Best Practices for Scientific Computing](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745)
 
->
 1. Write Programs for People, Not Computers
 2. Let the Computer Do the Work
 3. Make Incremental Changes
@@ -33,7 +31,6 @@ The purpose of this lecture is to help orient you on the path to writing softwar
 # 1. Write Programs For People, Not Computers
 
 
->
 * A program should not require its readers to hold more than a handful of facts in memory at once.
 * Make names consistent, distinctive, and meaningful.
 * Make code style and formatting consistent.
@@ -50,7 +47,6 @@ The purpose of this lecture is to help orient you on the path to writing softwar
 # 2. Let the Computer Do the Work
 
 
->
 * Make the computer repeat tasks.
 * Save recent commands in a file for re-use.
 * Use a build tool to automate workflows.
@@ -58,14 +54,12 @@ The purpose of this lecture is to help orient you on the path to writing softwar
 # 3. Make Incremental Changes.
 
 
->
 * Work in small steps with frequent feedback and course correction.
 * Use a version control system.
 * Put everything that has been created manually in version control.
 
 # Organize with Wikis
 
->
 * Similar to a lab notebook
 * organize your personal notes
 * organize your shared notes
@@ -80,7 +74,6 @@ The purpose of this lecture is to help orient you on the path to writing softwar
 
 # Use Version Control for Checkpointing and Collaboration
 
->
 * use *local* version control software to checkpoint personal code development
     + checkpointing your work encourages wild ideas and late-night coding sessions
     + you can easily restore back in the morning if it was a bad idea
@@ -92,14 +85,12 @@ The purpose of this lecture is to help orient you on the path to writing softwar
 # 4. Don't Repeat Yourself (or Others)
 
 
->
 * Every piece of data must have a single authoritative representation in the system.
 * Modularize code rather than copying and pasting.
 * Re-use code instead of rewriting it.
 
 # Automate common actions by saving simple blocks of code into **scripts**
 
->
 * A script is a set of commands organized into a single file
 * Sometimes it takes a few arguments, but more often there are just some parameters at the top of the file to modify
 * The script is the base unit of scientific programming, you should be comfortable writing these whenever you want to save or otherwise document or repeat your actions
@@ -107,7 +98,7 @@ The purpose of this lecture is to help orient you on the path to writing softwar
 * **Don't repeat commands into your REPL, save them to a script**
 
 # Refactor commonly used blocks of code into **functions**
->
+
 * Eventually, you will find that your scripts have a lot of repeated code, or that you are spending a lot of time adjusting parameters at the top of the file
 * Refactor out repeated code into **function calls** in your scripts and implement the **function** either in the same file or a separate one
 * Be comfortable with the calling and return syntax of your programming language environment, whether it is BASH or Python
@@ -115,25 +106,16 @@ The purpose of this lecture is to help orient you on the path to writing softwar
 
 # Group commonly used functions into **libraries**
 
->
 * If you can imagine a task there may already be a package/module/library
     + `conda` makes it really easy try new packages
 * If you are unlucky enough to have to write a lot of software functions for your work, you might want to consider designing and releasing a library so that others do not have to share your misfortune
-    + Make your own `conda` packages
-<!--
-* If you are unlucky enough to have to write a lot of software functions for your work, you might want to consider designing and releasing a library so that others do not have to share your misfortune
-* You might want to first check that nobody else has implemented the functionality you need
-* If something close exists, it may be worth adapting to your needs if the project is of high quality and suitably licensed
-* *Openly licensed non-commercial libraries tend to have a much longer effective lifespan than unreleased codes*
-* **Share your code with others, and use their code**
--->
+    + Make your own `conda` recipes
 
 
 
 # 5. Plan for Mistakes
 
 
->
 * Add assertions to programs to check their operation.
     + Packages like Numpy and Pandas provide helpful assertion functions
     + Many times they are tiny functions to test just one operation
@@ -145,11 +127,10 @@ The purpose of this lecture is to help orient you on the path to writing softwar
 
 # Verify and Validate your Code
 
->
 * **verification** - is your code correctly written?
 * **validation** - do your computations accurately model the physical phenomena in question?
 * Test frameworks help you verify your code, but validation is usually a manual process
- + although it is desirable to write regression tests that verify previously validated results hold true when the code has been modified!
+    + although it is desirable to write regression tests that verify previously validated results hold true when the code has been modified!
 * Use the **method of manufactured solutions** to verify correctness of code
 * use **comparisons to experiment** to validate code
 * use **comparisons to similar software** as an additional check
@@ -157,28 +138,25 @@ The purpose of this lecture is to help orient you on the path to writing softwar
 # 6. Document design and purpose, not mechanics.
 
 
->
 * Document interfaces and reasons, not implementations.
-  + Comments should explain *why* and *how*
+    + Comments should explain *why* and *how*
 * Refactor code in preference to explaining how it works.
-  + Clear, readable code is its own explanation
+    + Clear, readable code is its own explanation
 * Embed the documentation for a piece of software in that software.
-  + **Always write `docstrings`!**
-  + Several tools read `docstrings` to generate formatted API documentation
+    + **Always write `docstrings`!**
+    + Several tools read `docstrings` to generate formatted API documentation
 
 # Principles of documentation
 
->
 * Save every bit of code you use for generating publishable/reportable results
 * Document and comment your code for yourself as if you will need to understand it in 6 months
-  + use `README` files liberally
-  + as well as file-level, function-level, and inline documentation
-  + **Always write `docstrings`!**
+    + use `README` files liberally
+    + as well as file-level, function-level, and inline documentation
+    + **Always write `docstrings`!**
 * If any piece of code is too complex to easily describe, consider refactoring it
 
 # 7. Design flexibly for performance, build accessibly for correctness
 
->
 * Better algorithms beat better architectures
 * Write code in the highest-level language possible.
   + Python is significantly more portable and readable than C/C++
@@ -188,7 +166,6 @@ The purpose of this lecture is to help orient you on the path to writing softwar
 # Be fluent in multiple languages
 You speak multiple languages when interacting with a computer.  Choosing to use a new tool, library, or language can be similar to learning a new language:
 
->
 + There is a high initial startup cost as you learn vocabulary, grammar, and idioms
 + You will learn faster by observing and working with others who are more skilled than you
 + But once you have gained some fluency, you will find yourself capable of new things!
@@ -212,7 +189,6 @@ You speak multiple languages when interacting with a computer.  Choosing to use 
 # Collaborate
 
 
->
 * Use pre-merge code reviews.
   + GitHub-style *pull requests*
 * Use pair programming when bringing someone new up to speed and when
@@ -221,7 +197,7 @@ tackling particularly tricky problems.
 
 
 # Python Roadmap
->
+
 1. Organize work from IPython console or notebook into a script
     + Add simple argument parsing with `sys.argv`
     + `git init` , `git add`, `git commit`
@@ -231,20 +207,14 @@ tackling particularly tricky problems.
     + Add `if __name__ == '__main__':`
 3. Make the module *importable* as a py file
     + Don't rely on the global namespace
-> ```python
-x=5
-def my_function(y):
-    return y+x
-```
     + Clearly define arguments and returns for functions
     + Consider making classes
     + Add more docstrings
 
 # Python Roadmap
 
->
 4. Begin writing tests
-    + Functions beginning with `test_`
+    + Functions beginning with test\_
     + Use testing methods from Numpy and Pandas
     + Use `assert` to check the state of returns
 5. Organize the module into a package
@@ -262,7 +232,6 @@ def my_function(y):
 
 # Reduce Complexity
 
->
 * Endeavor to use languages and libraries that reduce the complexity of your work
 * It is worth installing a complicated or expensive software tool if your computations are naturally expressed with it
 * Always look for opportunities to write **less** code
